@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guessing Game</title>
+</head>
+
+<body>
+    <h1> Number Guessing Game</h1>
+
+    <p>Guess a number between 1 and 100!</p>
+
+    <input id="guess" type="number" placeholder="Enter your guess">
+
+    <button onclick="checkGuess()">Guess</button>
+
+    <p id="message"></p>
+
+    <script>
+        let secretNumber = Math.floor(Math.random() * 100) + 1;
+
+        function checkGuess() 
+            let guess = Number(document.getElementById("guess").value);
+            let message = document.getElementById("message");
+
+            if (guess === secretNumber) { 
+                message.textContent = Correct! You guessed it!";
+            }
+            else if (guess < secretNumber) {
+                message.textContent = Too low! Try again.";
+            }
+            else {
+                message.TextContent = Too high! Try again.";
+            }
+      }
+</script>
+</body>
+</html> 
